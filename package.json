@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm install",
     "postinstall": "concurrently -n \"client,server\" \"npm run client-install\" \"npm run server-install\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    
+
     "client": "cd client && npm run dev",
     "client-install": "cd client && npm install",
-    "server": "cd server && npm start",
+    "server": "cd server && node index.js",
     "server-install": "cd server && npm install",
 
     "start": "concurrently -n \"client,server\" \"npm run client-prod\" \"npm run server\"",
